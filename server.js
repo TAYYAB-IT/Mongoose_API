@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const monogo=require('./DB_connection')
 const student=require('./Schema.js')
-monogo('mongodb+srv://tybtest90:testing1122@cluster0.hqfbo.mongodb.net/test');
+monogo('mongodb+srv://username:password@cluster0.hqfbo.mongodb.net/test');  //To Connect With DataBase
 //Create a user
 app.post("/student/:id/:name/:age",(req,res)=>{
 const std=new student({id:req.params.id,name:req.params.name,age:req.params.age})
